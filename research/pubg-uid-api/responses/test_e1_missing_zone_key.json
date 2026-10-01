@@ -1,0 +1,48 @@
+{
+  "testId": "test_e1_missing_zone_key",
+  "testName": "Test E1 - Missing zoneId field in data",
+  "requestPayload": {
+    "code": "PUBG_ID",
+    "data": {
+      "userId": "5123456789"
+    }
+  },
+  "statusCode": 201,
+  "statusMessage": "Created",
+  "latencyMs": 198,
+  "headers": {
+    "server": "ESA",
+    "content-type": "application/json; charset=utf-8",
+    "transfer-encoding": "chunked",
+    "connection": "keep-alive",
+    "set-cookie": [
+      "REDACTED",
+      "REDACTED"
+    ],
+    "alt-svc": "h3=\":443\"; ma=86400, h2=\":443\"; ma=86400",
+    "date": "Wed, 30 Sep 2026 10:06:25 GMT",
+    "vary": "Origin, accept-encoding, Accept-Encoding",
+    "via": "ens-cache26.l2hk12[77,0,DP], ens-cache28.l2vn4[163,0,DP], ens-cache22.vn26[165,0,DP], ens-cache22.vn26[167,0]",
+    "x-site-cache-status": "DYNAMIC",
+    "access-control-allow-origin": "*",
+    "retry-after": "10",
+    "x-ratelimit-limit": "30",
+    "x-retry-remaining": "29",
+    "x-retry-reset": "Wed, 30 Sep 2026 10:06:35 GMT",
+    "x-powered-by": "Vocagame",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a4326a33fd865542-SIN",
+    "x-envoy-upstream-service-time": "26",
+    "cache-control": "no-cache",
+    "timing-allow-origin": "*",
+    "eagleid": "a3b579aa17907627858158115e"
+  },
+  "rawBody": "{\"message\":\"Success\",\"data\":{\"countryOrigin\":\"\",\"username\":\"Eliah2\"}}",
+  "parsedBody": {
+    "message": "Success",
+    "data": {
+      "countryOrigin": "",
+      "username": "Eliah2"
+    }
+  }
+}

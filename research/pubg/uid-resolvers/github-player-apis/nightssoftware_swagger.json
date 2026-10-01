@@ -1,0 +1,768 @@
+{
+  "definitions": {},
+  "info": {
+    "description": "🧩 API for Midasbuy Top-up Store (midasbuy.com): PUBG codes activation, getting players info and more! Get your API key here: https://t.me/MidasbuyAPI_Manager",
+    "termsOfService": "/",
+    "title": "Midasbuy API",
+    "version": "1.2.0"
+  },
+  "paths": {
+    "/api/v1/pubg/activate": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "player_id": {
+                  "description": "Player ID",
+                  "example": 555555555,
+                  "type": "integer"
+                },
+                "uc_code": {
+                  "description": "Avtivation code",
+                  "example": "rX7rASS72a25qdVcg0",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "properties": {
+                "data": {
+                  "properties": {
+                    "account_login": {
+                      "example": "login@gmail.com",
+                      "type": "string"
+                    },
+                    "account_password": {
+                      "example": "password",
+                      "type": "string"
+                    },
+                    "activated_at": {
+                      "example": 1763891643000,
+                      "type": "integer"
+                    },
+                    "activated_to": {
+                      "example": 555555554,
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "code_activated": {
+                      "example": "rX7rASS72a25qdVcg0",
+                      "type": "string"
+                    },
+                    "message": {
+                      "example": "Code activated",
+                      "type": "string"
+                    },
+                    "player_id": {
+                      "example": 555555555,
+                      "type": "integer"
+                    },
+                    "player_name": {
+                      "example": "PlayerName",
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "success",
+                        "failed"
+                      ],
+                      "example": "success",
+                      "type": "enum"
+                    }
+                  },
+                  "type": "object"
+                },
+                "message": {
+                  "example": "Ok",
+                  "type": "string"
+                },
+                "success": {
+                  "example": true,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "schema": {
+              "properties": {
+                "message": {
+                  "example": "Invalid request data",
+                  "type": "string"
+                },
+                "success": {
+                  "example": false,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "properties": {
+                "message": {
+                  "example": "Api key required",
+                  "type": "string"
+                },
+                "success": {
+                  "example": false,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "schema": {
+              "properties": {
+                "message": {
+                  "example": "Server error",
+                  "type": "string"
+                },
+                "success": {
+                  "example": false,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Activates PUBG code by player ID",
+        "tags": [
+          "Activate PUBG code"
+        ]
+      }
+    },
+    "/api/v1/pubg/activateAsTask": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "player_id": {
+                  "example": 555555555,
+                  "type": "integer"
+                },
+                "uc_code": {
+                  "example": "rX7rASS72a25qdVcg0",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Task accepted — poll POST /api/v1/pubg/taskStatus with {task_id}",
+            "schema": {
+              "properties": {
+                "data": {
+                  "properties": {
+                    "status": {
+                      "example": "pending",
+                      "type": "string"
+                    },
+                    "task_id": {
+                      "example": "3f2a9c1e8b7d4f60a1c2d3e4f5a6b7c8",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "message": {
+                  "example": "Ok",
+                  "type": "string"
+                },
+                "success": {
+                  "example": true,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Server error"
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Activates a PUBG code asynchronously (returns a task_id to poll)",
+        "tags": [
+          "Activate PUBG code"
+        ]
+      }
+    },
+    "/api/v1/pubg/bulkActivate": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "player_id": {
+                  "example": 555555555,
+                  "type": "integer"
+                },
+                "uc_codes": {
+                  "example": [
+                    "rX7rASS72a25qdVcg0",
+                    "rX7rASgrea25qdVcg0"
+                  ],
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 5,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "player_id",
+                "uc_codes"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "properties": {
+                "data": {
+                  "properties": {
+                    "player_id": {
+                      "example": 555555555,
+                      "type": "integer"
+                    },
+                    "player_name": {
+                      "example": "PlayerName",
+                      "type": "string"
+                    },
+                    "results": {
+                      "items": {
+                        "properties": {
+                          "activated_at": {
+                            "nullable": true,
+                            "type": "integer"
+                          },
+                          "activated_to": {
+                            "nullable": true,
+                            "type": "integer"
+                          },
+                          "code_activated": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "status": {
+                            "enum": [
+                              "success",
+                              "failed"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "message": {
+                  "example": "Ok",
+                  "type": "string"
+                },
+                "success": {
+                  "example": true,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Invalid request data (e.g., wrong format or too many codes)",
+            "schema": {
+              "properties": {
+                "message": {
+                  "example": "Invalid request data",
+                  "type": "string"
+                },
+                "success": {
+                  "example": false,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized or access denied",
+            "schema": {
+              "properties": {
+                "message": {
+                  "example": "Invalid or missing API key",
+                  "type": "string"
+                },
+                "success": {
+                  "example": false,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "properties": {
+                "message": {
+                  "example": "Server error",
+                  "type": "string"
+                },
+                "success": {
+                  "example": false,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Bulk activation of PUBG codes by player ID",
+        "tags": [
+          "Bulk activate PUBG codes"
+        ]
+      }
+    },
+    "/api/v1/pubg/checkCode": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "uc_code": {
+                  "description": "Activation code",
+                  "example": "rX7rASS72a25qdVcg0",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "properties": {
+                "data": {
+                  "properties": {
+                    "activated_at": {
+                      "example": 1631817600,
+                      "type": "integer"
+                    },
+                    "activated_to": {
+                      "example": 555555554,
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "amount": {
+                      "example": 60,
+                      "type": "integer"
+                    },
+                    "status": {
+                      "enum": [
+                        "activated",
+                        "not_activated"
+                      ],
+                      "example": "activated",
+                      "type": "enum"
+                    },
+                    "uc_code": {
+                      "example": "rX7rASS72a25qdVcg0",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "message": {
+                  "example": "Ok",
+                  "type": "string"
+                },
+                "success": {
+                  "example": true,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "schema": {
+              "properties": {
+                "message": {
+                  "example": "Invalid request data",
+                  "type": "string"
+                },
+                "success": {
+                  "example": false,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "properties": {
+                "message": {
+                  "example": "Api key required",
+                  "type": "string"
+                },
+                "success": {
+                  "example": false,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "schema": {
+              "properties": {
+                "message": {
+                  "example": "Server error",
+                  "type": "string"
+                },
+                "success": {
+                  "example": false,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Checks the activation status of a PUBG code",
+        "tags": [
+          "Check PUBG code activation"
+        ]
+      }
+    },
+    "/api/v1/pubg/getPlayer": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "player_id": {
+                  "description": "Player ID",
+                  "example": 555555555,
+                  "type": "integer"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "properties": {
+                "data": {
+                  "properties": {
+                    "message": {
+                      "example": "Player found",
+                      "type": "string"
+                    },
+                    "player_id": {
+                      "example": 555555555,
+                      "type": "integer"
+                    },
+                    "player_name": {
+                      "example": "PlayerName",
+                      "required": false,
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "success",
+                        "failed"
+                      ],
+                      "example": "success",
+                      "type": "enum"
+                    }
+                  },
+                  "required": false,
+                  "type": "object"
+                },
+                "message": {
+                  "example": "Ok",
+                  "type": "string"
+                },
+                "success": {
+                  "example": true,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "schema": {
+              "properties": {
+                "message": {
+                  "example": "Invalid request data",
+                  "type": "string"
+                },
+                "success": {
+                  "example": false,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "properties": {
+                "message": {
+                  "example": "Api key required",
+                  "type": "string"
+                },
+                "success": {
+                  "example": false,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "schema": {
+              "properties": {
+                "message": {
+                  "example": "Server error",
+                  "type": "string"
+                },
+                "success": {
+                  "example": false,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Gets player info by ID",
+        "tags": [
+          "Get player info by ID"
+        ]
+      }
+    },
+    "/api/v1/pubg/task/{task_id}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "task_id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Task state (see POST /api/v1/pubg/taskStatus)"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Task not found"
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Poll an async activation task by path (legacy alias of POST /taskStatus)",
+        "tags": [
+          "Activate PUBG code"
+        ]
+      }
+    },
+    "/api/v1/pubg/taskStatus": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "task_id": {
+                  "example": "3f2a9c1e8b7d4f60a1c2d3e4f5a6b7c8",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Task state. While running: data.status='pending'. When done: same shape as /activate's data.",
+            "schema": {
+              "properties": {
+                "data": {
+                  "properties": {
+                    "activated_at": {
+                      "nullable": true,
+                      "type": "integer"
+                    },
+                    "activated_to": {
+                      "nullable": true,
+                      "type": "integer"
+                    },
+                    "code_activated": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "player_id": {
+                      "type": "integer"
+                    },
+                    "player_name": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "pending",
+                        "success",
+                        "failed",
+                        "unknown"
+                      ],
+                      "type": "string"
+                    },
+                    "task_id": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "message": {
+                  "example": "Ok",
+                  "type": "string"
+                },
+                "success": {
+                  "example": true,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Task not found"
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Poll the status/result of an async activation task (task_id in the body)",
+        "tags": [
+          "Activate PUBG code"
+        ]
+      }
+    }
+  },
+  "produces": [
+    "application/json"
+  ],
+  "securityDefinitions": {
+    "ApiKeyAuth": {
+      "in": "header",
+      "name": "X-Api-Key",
+      "type": "apiKey"
+    }
+  },
+  "swagger": "2.0"
+}

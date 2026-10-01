@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Environment and sensitive files
+.env
+.env.*
+*.pem
+
+# Temporary files
+*.tmp
+*.log
+.DS_Store
+Thumbs.db

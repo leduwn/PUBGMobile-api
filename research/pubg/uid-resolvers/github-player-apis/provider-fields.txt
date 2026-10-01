@@ -1,0 +1,14 @@
+# Flattened JSON paths for Provider A: NightsSoftware (/api/v1/pubg/getPlayer)
+success
+message
+data.player_id
+data.player_name
+data.status
+data.message
+
+# Flattened JSON paths for Provider B: exfador (/info)
+success
+player_id
+nickname
+zone_id
+is_ban

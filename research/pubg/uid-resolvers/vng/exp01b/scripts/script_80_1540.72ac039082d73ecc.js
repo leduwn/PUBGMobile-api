@@ -1,0 +1,1 @@
+"use strict";(window["webpackJsonp_impage_materials_name_gems_materials_midasbuy_saas_materials@1768539847"]=window["webpackJsonp_impage_materials_name_gems_materials_midasbuy_saas_materials@1768539847"]||[]).push([["1540"],{61535:function(a,e,s){s.r(e);var m=s(45156),_=s.n(m);e.default=function(a){return _().createElement(_().Fragment,null)}}}]);

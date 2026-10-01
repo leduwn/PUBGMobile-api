@@ -1,0 +1,17 @@
+{
+  "uid": "5421835339",
+  "statusCode": 404,
+  "latencyMs": 448,
+  "headers": {
+    "x-ratelimit-limit": "30",
+    "x-retry-remaining": "29",
+    "x-retry-reset": "Wed, 30 Sep 2026 10:11:48 GMT",
+    "retry-after": "10"
+  },
+  "rawBody": "{\"statusCode\":404,\"message\":\"Invalid user account\",\"error\":\"Not Found\"}",
+  "parsedBody": {
+    "statusCode": 404,
+    "message": "Invalid user account",
+    "error": "Not Found"
+  }
+}

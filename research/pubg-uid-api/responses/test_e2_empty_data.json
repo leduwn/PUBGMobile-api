@@ -1,0 +1,43 @@
+{
+  "testId": "test_e2_empty_data",
+  "testName": "Test E2 - Missing data.userId",
+  "requestPayload": {
+    "code": "PUBG_ID",
+    "data": {}
+  },
+  "statusCode": 404,
+  "statusMessage": "Not Found",
+  "latencyMs": 168,
+  "headers": {
+    "server": "ESA",
+    "content-type": "application/json; charset=utf-8",
+    "transfer-encoding": "chunked",
+    "connection": "keep-alive",
+    "set-cookie": [
+      "REDACTED",
+      "REDACTED"
+    ],
+    "alt-svc": "h3=\":443\"; ma=86400, h2=\":443\"; ma=86400",
+    "date": "Wed, 30 Sep 2026 10:06:27 GMT",
+    "vary": "Origin, accept-encoding, Accept-Encoding",
+    "via": "ens-cache13.l2hk12[95,0,DP], ens-cache19.l2vn4[133,0,DP], ens-cache22.vn26[135,0,DP], ens-cache22.vn26[136,0]",
+    "x-site-cache-status": "DYNAMIC",
+    "access-control-allow-origin": "*",
+    "retry-after": "9",
+    "x-ratelimit-limit": "30",
+    "x-retry-remaining": "28",
+    "x-retry-reset": "Wed, 30 Sep 2026 10:06:35 GMT",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a4326a3e4bb0f8ef-SIN",
+    "x-envoy-upstream-service-time": "38",
+    "cache-control": "no-cache",
+    "timing-allow-origin": "*",
+    "eagleid": "a3b579aa17907627875148525e"
+  },
+  "rawBody": "{\"statusCode\":404,\"message\":\"Request failed with status code 400\",\"error\":\"Not Found\"}",
+  "parsedBody": {
+    "statusCode": 404,
+    "message": "Request failed with status code 400",
+    "error": "Not Found"
+  }
+}

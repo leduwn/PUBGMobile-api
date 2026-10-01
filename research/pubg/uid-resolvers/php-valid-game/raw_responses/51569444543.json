@@ -1,0 +1,40 @@
+{
+  "test_metadata": {
+    "provider": "gopay_games",
+    "upstream_url": "https://gopay.co.id/games/v1/order/user-account",
+    "package": "triyatna/php-valid-game",
+    "game": "pubg",
+    "uid": "51569444543",
+    "zoneId": "",
+    "timestamp": "2026-10-01T01:51:00+00:00"
+  },
+  "package_public_output": {
+    "status": true,
+    "message": "User ID is valid.",
+    "data": {
+      "game": "PUBG Mobile",
+      "nickname": "你层次太低",
+      "country": ""
+    }
+  },
+  "package_debug_output": {
+    "httpStatus": 201,
+    "timestamp": "2026-10-01T01:51:00+00:00",
+    "meta": {
+      "data": {
+        "message": "Success",
+        "data": {
+          "countryOrigin": "",
+          "username": "你层次太低"
+        }
+      }
+    }
+  },
+  "upstream_raw_body": {
+    "message": "Success",
+    "data": {
+      "countryOrigin": "",
+      "username": "你层次太低"
+    }
+  }
+}

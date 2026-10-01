@@ -1,0 +1,49 @@
+{
+  "testId": "test_b_valid_2",
+  "testName": "Test B - Valid UID 2 (5115612480)",
+  "requestPayload": {
+    "code": "PUBG_ID",
+    "data": {
+      "userId": "5115612480",
+      "zoneId": ""
+    }
+  },
+  "statusCode": 201,
+  "statusMessage": "Created",
+  "latencyMs": 169,
+  "headers": {
+    "server": "ESA",
+    "content-type": "application/json; charset=utf-8",
+    "transfer-encoding": "chunked",
+    "connection": "keep-alive",
+    "set-cookie": [
+      "REDACTED",
+      "REDACTED"
+    ],
+    "alt-svc": "h3=\":443\"; ma=86400, h2=\":443\"; ma=86400",
+    "date": "Wed, 30 Sep 2026 10:06:17 GMT",
+    "vary": "Origin, accept-encoding, Accept-Encoding",
+    "via": "ens-cache14.l2hk12[87,0,DP], ens-cache7.l2vn4[132,0,DP], ens-cache22.vn26[133,0,DP], ens-cache22.vn26[135,0]",
+    "x-site-cache-status": "DYNAMIC",
+    "access-control-allow-origin": "*",
+    "retry-after": "9",
+    "x-ratelimit-limit": "30",
+    "x-retry-remaining": "28",
+    "x-retry-reset": "Wed, 30 Sep 2026 10:06:25 GMT",
+    "x-powered-by": "Vocagame",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a43269fcab0e4e66-SIN",
+    "x-envoy-upstream-service-time": "35",
+    "cache-control": "no-cache",
+    "timing-allow-origin": "*",
+    "eagleid": "a3b579aa17907627770135933e"
+  },
+  "rawBody": "{\"message\":\"Success\",\"data\":{\"countryOrigin\":\"\",\"username\":\"Sonic905\"}}",
+  "parsedBody": {
+    "message": "Success",
+    "data": {
+      "countryOrigin": "",
+      "username": "Sonic905"
+    }
+  }
+}

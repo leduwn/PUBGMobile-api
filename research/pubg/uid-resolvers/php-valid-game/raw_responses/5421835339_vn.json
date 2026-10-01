@@ -1,0 +1,36 @@
+{
+  "test_metadata": {
+    "provider": "gopay_games",
+    "upstream_url": "https://gopay.co.id/games/v1/order/user-account",
+    "package": "triyatna/php-valid-game",
+    "game": "pubg",
+    "uid": "5421835339",
+    "zoneId": "",
+    "timestamp": "2026-10-01T01:51:01+00:00"
+  },
+  "package_public_output": {
+    "status": false,
+    "message": "Invalid user account",
+    "data": {
+      "game": "PUBG Mobile",
+      "nickname": "",
+      "country": ""
+    }
+  },
+  "package_debug_output": {
+    "httpStatus": 404,
+    "timestamp": "2026-10-01T01:51:01+00:00",
+    "meta": {
+      "data": {
+        "statusCode": 404,
+        "message": "Invalid user account",
+        "error": "Not Found"
+      }
+    }
+  },
+  "upstream_raw_body": {
+    "statusCode": 404,
+    "message": "Invalid user account",
+    "error": "Not Found"
+  }
+}

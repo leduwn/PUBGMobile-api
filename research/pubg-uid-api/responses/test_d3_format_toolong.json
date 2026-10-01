@@ -1,0 +1,46 @@
+{
+  "testId": "test_d3_format_toolong",
+  "testName": "Test D3 - Invalid format (999999999999999999999999)",
+  "requestPayload": {
+    "code": "PUBG_ID",
+    "data": {
+      "userId": "999999999999999999999999",
+      "zoneId": ""
+    }
+  },
+  "statusCode": 404,
+  "statusMessage": "Not Found",
+  "latencyMs": 254,
+  "headers": {
+    "server": "ESA",
+    "content-type": "application/json; charset=utf-8",
+    "transfer-encoding": "chunked",
+    "connection": "keep-alive",
+    "set-cookie": [
+      "REDACTED",
+      "REDACTED"
+    ],
+    "alt-svc": "h3=\":443\"; ma=86400, h2=\":443\"; ma=86400",
+    "date": "Wed, 30 Sep 2026 10:06:24 GMT",
+    "vary": "Origin, accept-encoding, Accept-Encoding",
+    "via": "ens-cache14.l2hk12[178,0,DP], ens-cache7.l2vn4[223,0,DP], ens-cache22.vn26[225,0,DP], ens-cache22.vn26[227,0]",
+    "x-site-cache-status": "DYNAMIC",
+    "access-control-allow-origin": "*",
+    "retry-after": "2",
+    "x-ratelimit-limit": "30",
+    "x-retry-remaining": "24",
+    "x-retry-reset": "Wed, 30 Sep 2026 10:06:25 GMT",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a4326a28a854f93f-SIN",
+    "x-envoy-upstream-service-time": "126",
+    "cache-control": "no-cache",
+    "timing-allow-origin": "*",
+    "eagleid": "a3b579aa17907627840467666e"
+  },
+  "rawBody": "{\"statusCode\":404,\"message\":\"Invalid user account\",\"error\":\"Not Found\"}",
+  "parsedBody": {
+    "statusCode": 404,
+    "message": "Invalid user account",
+    "error": "Not Found"
+  }
+}
