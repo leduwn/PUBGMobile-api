@@ -14,7 +14,7 @@ vendor/
 Thumbs.db
 
 # Raw traffic capture files
-research/pubg/traffic/**/raw/
+research/pubg/**/raw/
 *.pcapng
 *.pcap
 *.etl
