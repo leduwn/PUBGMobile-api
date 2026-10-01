@@ -1,0 +1,16 @@
+Selected interface:
+Component Id: 14
+Name: TP-Link Wireless USB Adapter
+MAC Address: 20-E1-5D-F7-A7-A4
+Type: Wi-Fi (802.11 / NDIS 6.x)
+IP Address: 192.168.100.194
+
+Reason:
+Primary active internet adapter on Windows host. LDPlayer's NAT engine (VBoxNetNAT.exe, PID 42268) binds directly to this interface IP (192.168.100.194) to bridge all Android guest TCP/UDP traffic to the internet. Live 3-second test capture confirmed bidirectional packet capture on Component 14 with full TCP/UDP frames.
+
+Other candidate interfaces:
+- Component 146: vEthernet (Default Switch) [Hyper-V Virtual Adapter - Inactive for LDPlayer]
+- Component 147: Realtek Gaming 2.5GbE Family Controller [Physical Ethernet - Cable Disconnected]
+- Component 5: Tailscale Tunnel [VPN Tunnel - Not routing LDPlayer game traffic]
+- Component 16: VPN Client Adapter - VPN123 [Disconnected]
+- Component 17: VPN Client Adapter - VPN111 [Disconnected]

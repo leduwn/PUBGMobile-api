@@ -1,0 +1,2 @@
+domain,first_seen,last_seen,count,notes
+DNS_NOT_OBSERVABLE,N/A,N/A,0,No plain DNS queries on host adapter (Android guest used internal resolver)

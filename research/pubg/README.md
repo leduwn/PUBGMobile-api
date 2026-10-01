@@ -19,6 +19,11 @@ Target UID: `5421835339` (Confirmed valid PUBG Mobile VN account).
 - Third-party Midasbuy APIs -> Collection/Profile: **REJECTED** (Dead end; only return nickname/zone/ban status)
 - GoPay Games API (`php-valid-game`): **VERIFIED NICKNAME ONLY** (Upstream returns strictly `username` + empty `countryOrigin`)
 - GoPay Games -> Collection/Profile: **REJECTED** (Dead end)
+- Emulator Lobby Baseline Fingerprint: **VERIFIED** (6 persistent TCP connections identified)
+- Primary Game Multiplexed Channels: **VERIFIED** (`43.129.146.99:17500`, `43.174.218.78:20371`, `43.163.56.4:15692`)
+- GCloud UDP 8030 Edge Latency Probing: **VERIFIED** (Lightweight 22-byte probes across Tencent subnets)
+- Local UI Isolation (Settings): **VERIFIED** (Opening/closing Settings generates zero new server connections)
+
 - UID -> In-game Profile API: **UNKNOWN**
 - UID -> Collection: **UNKNOWN**
 - Collection service: **UNKNOWN**
@@ -37,8 +42,8 @@ Target UID: `5421835339` (Confirmed valid PUBG Mobile VN account).
   - **Status:** COMPLETED
   - **Report:** `research/pubg/uid-resolvers/php-valid-game/report.md`
 - **Experiment #02 — Emulator Network Baseline**
-  - **Status:** PLANNED
-  - **Execution:** Ready to execute
+  - **Status:** COMPLETED
+  - **Report:** `research/pubg/traffic/exp02/report.md`
 
 ## 3. Directory Layout
 `research/pubg/`

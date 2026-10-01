@@ -1,0 +1,44 @@
+remote_ip,remote_port,transport,hostname,first_seen,last_seen,duration_seconds,packets_out,packets_in,bytes_out,bytes_in,long_lived,notes
+1.178.39.9,8030,UDP,UNKNOWN,,,transient,3,0,66,0,NO,Tencent GCloud Ping
+101.32.147.163,8030,UDP,UNKNOWN,,,transient,2,0,44,0,NO,Tencent GCloud Ping
+101.33.106.55,8030,UDP,UNKNOWN,,N/A,transient,3,0,66,0,NO,Tencent GCloud Ping
+101.33.107.51,8030,UDP,UNKNOWN,N/A,,transient,7,0,154,0,NO,Tencent GCloud Ping
+104.29.132.50,19327,UDP,UNKNOWN,,,transient,8973,0,3105774,0,NO,Transient
+104.29.132.91,19303,UDP,UNKNOWN,,,transient,1051,0,242504,0,NO,Transient
+104.29.138.149,19333,UDP,UNKNOWN,,,transient,51,0,1634,0,NO,Transient
+118.69.16.30,443,TCP,vng-hanoi-gw.zing.vn (VNG AS18403),N/A,,27,4,0,23,0,PARTIAL,Idle active 27s/60s; VNG PUBG VN Gateway
+129.226.1.157,443,TCP,sg-telemetry.tencentcloud.com (Tencent SG),,,60,16,0,7729,0,YES,Idle active 60s/60s; Settings active 35s/35s; Tencent Cloud Backend
+13.212.153.106,443,TCP,UNKNOWN,,,transient,16898,0,24425545,0,NO,Transient
+162.159.128.233,443,UDP,UNKNOWN,,N/A,transient,11,0,7655,0,NO,Transient
+162.159.133.233,443,UDP,UNKNOWN,N/A,,transient,9,0,4680,0,NO,Transient
+162.159.134.234,443,TCP,UNKNOWN,,,transient,55,0,429,0,NO,Transient
+162.159.135.232,443,TCP,UNKNOWN,N/A,,transient,189,0,76340,0,NO,Transient
+162.159.200.1,123,UDP,UNKNOWN,,,transient,2,0,96,0,NO,Transient
+162.62.67.44,8030,UDP,UNKNOWN,,,transient,2,0,44,0,NO,Tencent GCloud Ping
+162.62.82.176,8030,UDP,UNKNOWN,N/A,,transient,8,0,176,0,NO,Tencent GCloud Ping
+162.62.82.233,8030,UDP,UNKNOWN,,N/A,transient,5,0,110,0,NO,Tencent GCloud Ping
+170.106.102.31,8030,UDP,UNKNOWN,,,transient,2,0,44,0,NO,Tencent GCloud Ping
+20.199.56.8,8030,UDP,UNKNOWN,,,transient,18,0,396,0,NO,Tencent GCloud Ping
+20.203.46.161,8030,UDP,UNKNOWN,,,transient,18,0,396,0,NO,Tencent GCloud Ping
+23.236.111.38,8030,UDP,UNKNOWN,,N/A,transient,5,0,110,0,NO,Tencent GCloud Ping
+23.251.54.133,8030,UDP,UNKNOWN,,N/A,transient,1,0,22,0,NO,Tencent GCloud Ping
+23.251.54.168,8030,UDP,UNKNOWN,N/A,,transient,11,0,242,0,NO,Tencent GCloud Ping
+23.98.75.28,8030,UDP,UNKNOWN,,,transient,8,0,176,0,NO,Tencent GCloud Ping
+3.88.247.34,443,TCP,UNKNOWN,,N/A,transient,5,0,1,0,NO,Transient
+3.95.129.122,443,TCP,UNKNOWN,,N/A,transient,33,0,5983,0,NO,Transient
+34.225.165.190,443,TCP,UNKNOWN,N/A,,transient,5,0,0,0,NO,Transient
+34.49.39.67,443,TCP,UNKNOWN,,,transient,626,0,550884,0,NO,Transient
+4.207.44.74,443,TCP,UNKNOWN,,,transient,96,0,83082,0,NO,Transient
+43.129.145.110,8030,UDP,UNKNOWN,N/A,,transient,1,0,22,0,NO,Tencent GCloud Ping
+43.129.145.235,8030,UDP,UNKNOWN,,N/A,transient,6,0,132,0,NO,Tencent GCloud Ping
+43.129.146.204,8030,UDP,UNKNOWN,N/A,,transient,12,0,264,0,NO,Tencent GCloud Ping
+43.129.146.99,17500,TCP,game-rpc.tencentcloud.com (Tencent),,,60,218,0,9701,0,YES,Idle active 60s/60s; Settings active 35s/35s; Tencent Cloud Backend
+43.155.189.72,8030,UDP,UNKNOWN,,,transient,10,0,220,0,NO,Tencent GCloud Ping
+43.163.56.4,15692,TCP,game-rpc.tencentcloud.com (Tencent),N/A,N/A,60,0,0,0,0,YES,Idle active 60s/60s; Settings active 35s/35s; Tencent Cloud Backend
+43.173.163.50,443,TCP,game-service.tencentcloud.com (Tencent),,,60,6,0,760,0,YES,Idle active 60s/60s; Settings active 35s/35s; Tencent Cloud Backend
+43.174.218.78,20371,TCP,game-rpc.tencentcloud.com (Tencent),,,60,8,0,861,0,YES,Idle active 60s/60s; Settings active 35s/35s; Tencent Cloud Backend
+49.213.95.30,443,TCP,UNKNOWN,,,transient,19,0,738,0,NO,Transient
+49.213.95.37,443,TCP,UNKNOWN,,,transient,10,0,225,0,NO,Transient
+54.204.24.43,443,TCP,UNKNOWN,,N/A,transient,3,0,0,0,NO,Transient
+54.90.36.212,443,TCP,UNKNOWN,N/A,,transient,69,0,13365,0,NO,Transient
+74.125.23.188,5228,TCP,fcm.googleapis.com (Google Push),N/A,N/A,60,0,0,0,0,YES,Idle active 60s/60s; Settings active 35s/35s

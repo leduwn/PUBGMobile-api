@@ -12,3 +12,10 @@ vendor/
 *.log
 .DS_Store
 Thumbs.db
+
+# Raw traffic capture files
+research/pubg/traffic/**/raw/
+*.pcapng
+*.pcap
+*.etl
+

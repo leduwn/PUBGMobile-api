@@ -1,0 +1,9 @@
+LDPlayer 9 Process Tree (Live Session):
+
+Process Name        PID     Executable Path                                  Role
+------------        ---     ---------------                                  ----
+dnplayer.exe        3508    D:\LDPlayer\LDPlayer9\dnplayer.exe               Main frontend UI window (Title: "LDPlayer")
+Ld9BoxSVC.exe       39248   D:\LDPlayer\LDPlayer9\Ld9BoxSVC.exe              VirtualBox COM service coordinator
+Ld9BoxHeadless.exe  35772   D:\LDPlayer\LDPlayer9\Ld9BoxHeadless.exe         VirtualBox Android 9 VM engine (Game process host)
+VBoxNetDHCP.exe     37100   D:\LDPlayer\LDPlayer9\VBoxNetDHCP.exe            Virtual network internal DHCP service
+VBoxNetNAT.exe      15584   D:\LDPlayer\LDPlayer9\VBoxNetNAT.exe             Virtual network NAT router (All VM network egress/ingress)
