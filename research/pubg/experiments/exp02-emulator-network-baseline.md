@@ -1,8 +1,8 @@
 # Experiment #02 — PUBG Mobile VN Emulator Network Baseline
 
 ## Status
-- **Status:** PLANNED
-- **Execution:** DEFERRED until next research session
+- **Status:** COMPLETED
+- **Execution:** COMPLETED (Report: `research/pubg/traffic/exp02/report.md`)
 
 ## Objective
 Establish clean network baseline for PUBG Mobile VN:

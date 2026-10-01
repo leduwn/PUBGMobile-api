@@ -23,6 +23,9 @@ Target UID: `5421835339` (Confirmed valid PUBG Mobile VN account).
 - Primary Game Multiplexed Channels: **VERIFIED** (`43.129.146.99:17500`, `43.174.218.78:20371`, `43.163.56.4:15692`)
 - GCloud UDP 8030 Edge Latency Probing: **VERIFIED** (Lightweight 22-byte probes across Tencent subnets)
 - Local UI Isolation (Settings): **VERIFIED** (Opening/closing Settings generates zero new server connections)
+- UID -> Friend Search network mechanism: **OBSERVED** (Multiplexed binary RPC over `43.174.218.78:20371` / `43.129.146.99:17500` + on-demand social gateway `150.109.0.77:8013`)
+- Friend Search plaintext markers: **REJECTED** (Zero plaintext leaked on wire; binary RPC framing / TLS)
+
 
 - UID -> In-game Profile API: **UNKNOWN**
 - UID -> Collection: **UNKNOWN**
@@ -44,6 +47,9 @@ Target UID: `5421835339` (Confirmed valid PUBG Mobile VN account).
 - **Experiment #02 — Emulator Network Baseline**
   - **Status:** COMPLETED
   - **Report:** `research/pubg/traffic/exp02/report.md`
+- **Experiment #03 — Friend Search UID 5421835339**
+  - **Status:** COMPLETED
+  - **Report:** `research/pubg/friend-search/exp03/report.md`
 
 ## 3. Directory Layout
 `research/pubg/`
@@ -54,36 +60,29 @@ Target UID: `5421835339` (Confirmed valid PUBG Mobile VN account).
   - `github-player-apis/`
   - `php-valid-game/`
 - `friend-search/`
+  - `exp03/`
 - `profile/`
 - `collection/`
 - `traffic/`
+  - `exp02/`
 - `apk-static/`
 - `protocol/`
 - `reports/`
 
-
-
 ## 4. Next Session
 Next research task:
 
-Experiment #02 — PUBG Mobile VN Emulator Network Baseline
+Experiment #04 — Player Profile Inspection from Friend Search Result
 
 Primary target:
-Prepare an Android emulator capable of running PUBG Mobile VN and observe normal network metadata before performing Friend Search.
-
-Do not begin with Collection investigation.
+Inspect the resolved player card for UID `5421835339` (`Duwn黎杨`) in PUBG Mobile VN and observe network traffic deltas to identify whether player profile details (avatar, frame, popularity, tier, collection visibility) are retrieved over existing persistent RPC channels or on-demand web gateways.
 
 Required order:
-1. Confirm emulator environment.
-2. Confirm PUBG Mobile VN launches normally.
-3. Confirm controlled account can reach lobby.
-4. Select appropriate network capture method.
-5. Capture idle-lobby baseline.
-6. Capture harmless Settings control.
-7. Generate baseline report.
-8. Stop.
-9. Review results before Experiment #03.
-
-Experiment #03 after review:
-Friend Search UID 5421835339.
+1. Review Experiment #03 baseline findings.
+2. Confirm game remains in stable state with search result displayed.
+3. Capture A: Stable search result baseline.
+4. Capture B: Click player card -> Inspect Profile screen.
+5. Capture C: Harmless UI control on Profile screen.
+6. Differential traffic extraction and analysis.
+7. Stop. DO NOT proceed to Collection tab.
 
